@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mynavigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="tranmanhthang19110464.hcmute.edu.vn.foodyAndroid.homeFragment"
+        android:label="Trang chủ"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="tranmanhthang19110464.hcmute.edu.vn.foodyAndroid.notificationFragment"
+        android:label="Thông báo"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/orderFragment"
+        android:name="tranmanhthang19110464.hcmute.edu.vn.foodyAndroid.orderFragment"
+        android:label="Đơn hàng"
+        tools:layout="@layout/fragment_order" />
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="tranmanhthang19110464.hcmute.edu.vn.foodyAndroid.userFragment"
+        android:label="Người dùng"
+        tools:layout="@layout/fragment_user" />
+</navigation>
