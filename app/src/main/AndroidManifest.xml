@@ -10,16 +10,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalProjectNavBar">
         <activity
-            android:name="tranmanhthang19110464.hcmute.edu.vn.foodyAndroid.infoUserActivity"
+            android:name=".billActivity"
             android:exported="false" />
         <activity
-            android:name="tranmanhthang19110464.hcmute.edu.vn.foodyAndroid.registerActivity"
+            android:name=".cartFoodActivity"
             android:exported="false" />
         <activity
-            android:name="tranmanhthang19110464.hcmute.edu.vn.foodyAndroid.loginActivity"
+            android:name=".OderFood"
             android:exported="false" />
         <activity
-            android:name="tranmanhthang19110464.hcmute.edu.vn.foodyAndroid.MainActivity"
+            android:name=".restaurantActivity"
+            android:exported="false" />
+        <activity
+            android:name=".registerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".loginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

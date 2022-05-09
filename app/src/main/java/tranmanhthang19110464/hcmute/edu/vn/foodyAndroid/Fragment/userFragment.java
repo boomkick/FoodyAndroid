@@ -1,22 +1,28 @@
-package tranmanhthang19110464.hcmute.edu.vn.foodyAndroid;
+package tranmanhthang19110464.hcmute.edu.vn.foodyAndroid.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import tranmanhthang19110464.hcmute.edu.vn.foodyAndroid.R;
+import tranmanhthang19110464.hcmute.edu.vn.foodyAndroid.loginActivity;
+import tranmanhthang19110464.hcmute.edu.vn.foodyAndroid.restaurantActivity;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link orderFragment#newInstance} factory method to
+ * Use the {@link userFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class orderFragment extends Fragment {
-
+public class userFragment extends Fragment {
+    Button btnDangXuat;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -26,7 +32,7 @@ public class orderFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public orderFragment() {
+    public userFragment() {
         // Required empty public constructor
     }
 
@@ -36,11 +42,11 @@ public class orderFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment orderFragment.
+     * @return A new instance of fragment userFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static orderFragment newInstance(String param1, String param2) {
-        orderFragment fragment = new orderFragment();
+    public static userFragment newInstance(String param1, String param2) {
+        userFragment fragment = new userFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -58,9 +64,23 @@ public class orderFragment extends Fragment {
     }
 
     @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        btnDangXuat = (Button) view.findViewById(R.id.buttonDangXuat);
+        btnDangXuat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), loginActivity.class);
+                startActivity(intent);
+                //Intent intent = new Intent(getActivity(), restaurantActivity.class);
+            }
+        });
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_order, container, false);
+        return inflater.inflate(R.layout.fragment_user, container, false);
     }
 }

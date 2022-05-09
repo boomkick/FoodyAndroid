@@ -17,13 +17,13 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="40sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextDangKiSdt"
+        app:layout_constraintBottom_toTopOf="@+id/editTextPhoneRegister"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextDangKiSdt"
+        android:id="@+id/editTextPhoneRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -33,13 +33,13 @@
         android:textColor="@color/black"
         android:textColorHint="@color/black"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextNhapMK"
+        app:layout_constraintBottom_toTopOf="@+id/editTextPassResgister"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewDK" />
 
     <EditText
-        android:id="@+id/editTextNhapMK"
+        android:id="@+id/editTextPassResgister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
@@ -48,13 +48,13 @@
         android:textColor="@color/black"
         android:textColorHint="@color/black"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextXacNhanMK"
+        app:layout_constraintBottom_toTopOf="@+id/editTextRepassRegister"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDangKiSdt" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextPhoneRegister" />
 
     <EditText
-        android:id="@+id/editTextTextXacNhanMK"
+        android:id="@+id/editTextRepassRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
@@ -63,13 +63,13 @@
         android:textColor="@color/black"
         android:textColorHint="@color/black"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTen"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNameRegister"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNhapMK" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextPassResgister" />
 
     <Button
-        android:id="@+id/buttonDK"
+        android:id="@+id/buttonRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
@@ -81,22 +81,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxAccept" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/checkBoxAccept"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="56dp"
         android:text="Đồng ý với điều khoản của chúng tôi"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonDK"
+        app:layout_constraintBottom_toTopOf="@+id/buttonRegister"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDiachi" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextAddRegister" />
 
     <EditText
-        android:id="@+id/editTextTen"
+        android:id="@+id/editTextNameRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
@@ -105,13 +105,13 @@
         android:textColor="@color/black"
         android:textColorHint="@color/black"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextDiachi"
+        app:layout_constraintBottom_toTopOf="@+id/editTextAddRegister"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextXacNhanMK" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextRepassRegister" />
 
     <EditText
-        android:id="@+id/editTextDiachi"
+        android:id="@+id/editTextAddRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
@@ -120,8 +120,8 @@
         android:textColor="@color/black"
         android:textColorHint="@color/black"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox"
+        app:layout_constraintBottom_toTopOf="@+id/checkBoxAccept"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTen" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextNameRegister" />
 </androidx.constraintlayout.widget.ConstraintLayout>

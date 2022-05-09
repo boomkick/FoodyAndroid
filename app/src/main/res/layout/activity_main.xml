@@ -6,6 +6,65 @@
     android:layout_height="match_parent"
     tools:context="tranmanhthang19110464.hcmute.edu.vn.foodyAndroid.MainActivity">
 
+<!--    <Button-->
+<!--        android:id="@+id/buttonHomeTest"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Home"-->
+<!--        app:layout_constraintVertical_chainStyle="packed"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/buttonNotificationTest"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+<!--    <Button-->
+<!--        android:id="@+id/buttonNotificationTest"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Notification"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/buttonOrderTest"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/buttonHomeTest" />-->
+<!--    <Button-->
+<!--        android:id="@+id/buttonOrderTest"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Order"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/buttonAccountTest"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/buttonNotificationTest" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/buttonAccountTest"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Account"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/buttonBillTest"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/buttonOrderTest" />-->
+<!--    <Button-->
+<!--        android:id="@+id/buttonBillTest"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Bill"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/buttonRestaurantDetailTest"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/buttonAccountTest" />-->
+<!--    <Button-->
+<!--        android:id="@+id/buttonRestaurantDetailTest"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="RestaurantDetail"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/buttonBillTest" />-->
+
+
+    <!--    Start Frame layout-->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
@@ -23,9 +82,9 @@
         app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"/>
 
-    </FrameLayout>
+<!--    </FrameLayout>-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
