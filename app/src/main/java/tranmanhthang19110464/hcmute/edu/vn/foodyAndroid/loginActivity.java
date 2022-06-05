@@ -44,20 +44,21 @@ public class loginActivity extends AppCompatActivity {
                 String pass = editPass.getText().toString();
 
                 if(phone.isEmpty() || pass.isEmpty()){
-                    Toast.makeText(loginActivity.this, "Phone or Password is Empty", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(loginActivity.this, "Phone or pass is Empty", Toast.LENGTH_SHORT).show();
                 }else{
                     if(Login(phone,pass)){
                         Cursor user = database.GetData("Select * from users where phone='"+phone+"'");
                         user.moveToNext();
-                        String id = user.getString(0);
+                        int id = user.getInt(0);
                         Intent intent = new Intent(loginActivity.this,MainActivity.class);
                         intent.putExtra("user_id",id);
                         startActivity(intent);
+                        Global.user_id=id;
+                        finish();
                     }else{
                         Toast.makeText(loginActivity.this, "Wrong Phone or Password", Toast.LENGTH_SHORT).show();
                     }
                 }
-                finish();
             }
         });
 

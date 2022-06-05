@@ -49,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
                 switch(item.getItemId()){
                     case R.id.home:
                         replaceFragment(fragmentHome);
-
                         break;
                     case R.id.notification:
                         replaceFragment(fragmentNotification);
@@ -71,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
         //Reset CSDL
         database.QueryData("Delete from restaurant");
         database.QueryData("Delete from food");
+        database.QueryData("Delete from ordertable");
         addRestaurantstoDB();
         addFoodstoDB();
 
@@ -83,13 +83,13 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.commit();
     }
 
-    private void createDatabase() {
-        database.QueryData("Create table if not exists user(id INTEGER PRIMARY KEY AUTOINCREMENT, name VARCHAR(255), birthdate VARCHAR(255), address VARCHAR(255), image INTEGER, isBuyer INTEGER)");
-        database.QueryData("Create table if not exists restaurant(idRestaurant INTEGER PRIMARY KEY, user_id INTEGER, name VARCHAR(255), address VARCHAR(255), time VARCHAR(255), rate DOUBLE, image INTEGER)");
-        database.QueryData("Create table if not exists food(idFood INTEGER PRIMARY KEY AUTOINCREMENT, restaurant_id INTEGER, name VARCHAR(255), describe VARCHAR(255), image INTEGER, price INTEGER)");
-        database.QueryData("Create table if not exists comment(restaurant_id INTEGER, user_id INTEGER, user_name VARCHAR(255), content VARCHAR(255), rate DOUBLE)");
-        database.QueryData("Create table if not exists ordertable(idOrder INTEGER PRIMARY KEY AUTOINCREMENT,user_id INTEGER, restaurant_id INTEGER, food_id INTEGER, quantity INTEGER, price INTEGER, isConfirm INTEGER)");
-    }
+//    private void createDatabase() {
+//        database.QueryData("Create table if not exists user(id INTEGER PRIMARY KEY AUTOINCREMENT, name VARCHAR(255), birthdate VARCHAR(255), address VARCHAR(255), image INTEGER, isBuyer INTEGER)");
+//        database.QueryData("Create table if not exists restaurant(idRestaurant INTEGER PRIMARY KEY, user_id INTEGER, name VARCHAR(255), address VARCHAR(255), time VARCHAR(255), rate DOUBLE, image INTEGER)");
+//        database.QueryData("Create table if not exists food(idFood INTEGER PRIMARY KEY AUTOINCREMENT, restaurant_id INTEGER, name VARCHAR(255), describe VARCHAR(255), image INTEGER, price INTEGER)");
+//        database.QueryData("Create table if not exists comment(restaurant_id INTEGER, user_id INTEGER, user_name VARCHAR(255), content VARCHAR(255), rate DOUBLE)");
+//        database.QueryData("Create table if not exists ordertable(idOrder INTEGER PRIMARY KEY AUTOINCREMENT,user_id INTEGER, restaurant_id INTEGER, food_id INTEGER, quantity INTEGER, price INTEGER, isConfirm INTEGER)");
+//    }
     public boolean addFood(Food food){
         if(food == null){
             return false;
@@ -134,15 +134,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void addRestaurantstoDB() {
-        addRestaurant(new NhaHang(0,0,"Burger King","QL0","5:00 22:00", 4.6, R.drawable.restaurant_burgerking_icon));
-        addRestaurant(new NhaHang(1,1,"Dookki","QL1","5:00 22:00", 4.5, R.drawable.restaurant_dookki_icon));
-        addRestaurant(new NhaHang(2,2,"KFC","22 Đ. Nguyễn Thị Tú, Âp 4، Bình Chánh, Thành phố Hồ Chí Minh 70000","10:00 22:00", 4.6, R.drawable.restaurant_kfc_icon));
-        addRestaurant(new NhaHang(3,3,"MC Donald","QL1","5:00 22:00", 4.6, R.drawable.restaurant_mcdonald_icon));
-        addRestaurant(new NhaHang(4,4,"Tròn 94","QL1","5:00 22:00", 4.6, R.drawable.restaurant_tron94_icon));
-        addRestaurant(new NhaHang(5,5,"Tròn 94","QL1","5:00 22:00", 4.6, R.drawable.restaurant_tron94_icon));
-        addRestaurant(new NhaHang(6,6,"Tròn 94","QL1","5:00 22:00", 4.6, R.drawable.restaurant_tron94_icon));
-        addRestaurant(new NhaHang(7,7,"Tròn 94","QL1","5:00 22:00", 4.6, R.drawable.restaurant_tron94_icon));
-        addRestaurant(new NhaHang(8,8,"Tròn 94","QL1","5:00 22:00", 4.6, R.drawable.restaurant_tron94_icon));
+        addRestaurant(new NhaHang(0,0,"Burger King","277 Phạm Ngũ Lão, Phường Phạm Ngũ Lão, Quận 1, Thành phố Hồ Chí Minh 700000, Việt Nam","5:00 22:00", 4.6, R.drawable.restaurant_burgerking_icon));
+        addRestaurant(new NhaHang(1,1,"Dookki","141 Nguyễn Gia Trí, Phường 25, Bình Thạnh, Thành phố Hồ Chí Minh 70000, Việt Nam","5:00 22:00", 4.5, R.drawable.restaurant_dookki_icon));
+        addRestaurant(new NhaHang(2,2,"KFC","193 Đ. Lê Văn Việt, Hiệp Phú, Quận 9, Thành phố Hồ Chí Minh, Việt Nam","10:00 22:00", 4.6, R.drawable.restaurant_kfc_icon));
+        addRestaurant(new NhaHang(3,3,"MC Donald","2-6Bis Điện Biên Phủ, Đa Kao, Quận 1, Thành phố Hồ Chí Minh 70000, Việt Nam","5:00 22:00", 4.6, R.drawable.restaurant_mcdonald_icon));
+        addRestaurant(new NhaHang(4,4,"Toco Toco","827 Đ. Kha Vạn Cân, Linh Chiểu, Thủ Đức, Thành phố Hồ Chí Minh, Việt Nam","5:00 22:00", 4.6, R.drawable.restaurant_tron94_icon));
+        addRestaurant(new NhaHang(5,5,"Miutea","29 Đường Nguyễn Văn Nghi, Phường 4, Gò Vấp, Thành phố Hồ Chí Minh 700000, Việt Nam","5:00 22:00", 4.6, R.drawable.restaurant_tron94_icon));
+        addRestaurant(new NhaHang(6,6,"Koi","372 Đ. Võ Văn Ngân, Bình Thọ, Thủ Đức, Thành phố Hồ Chí Minh 70000, Việt Nam","5:00 22:00", 4.6, R.drawable.restaurant_tron94_icon));
+        addRestaurant(new NhaHang(7,7,"Trà sữa mèo","95H Quang Trung, P, Tp. Thủ Đức, Thành phố Hồ Chí Minh 700000, Việt Nam","5:00 22:00", 4.6, R.drawable.restaurant_tron94_icon));
+        addRestaurant(new NhaHang(8,8,"Highlands Coffe","216 Đ. Võ Văn Ngân, Bình Thọ, Thủ Đức, Thành phố Hồ Chí Minh 700000, Việt Nam","5:00 22:00", 4.6, R.drawable.restaurant_tron94_icon));
     }
 
 

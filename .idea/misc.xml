@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Thietkephanmemhuongdoituong/foodyAndroid/app/src/main/res/layout/activity_cart_food.xml" value="0.25416666666666665" />
+        <entry key="..\:/Thietkephanmemhuongdoituong/foodyAndroid/app/src/main/res/layout/activity_history_order.xml" value="0.25416666666666665" />
+        <entry key="..\:/Thietkephanmemhuongdoituong/foodyAndroid/app/src/main/res/layout/activity_register.xml" value="0.15081521739130435" />
+        <entry key="..\:/Thietkephanmemhuongdoituong/foodyAndroid/app/src/main/res/layout/activity_restaurant.xml" value="0.25416666666666665" />
+        <entry key="..\:/Thietkephanmemhuongdoituong/foodyAndroid/app/src/main/res/layout/list_food_cart.xml" value="0.24010416666666667" />
+        <entry key="..\:/Thietkephanmemhuongdoituong/foodyAndroid/app/src/main/res/layout/menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/FinalProjectNavBar/app/src/main/res/layout/activity_info_user.xml" value="0.264" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/FinalProjectNavBar/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/FinalProjectNavBar/app/src/main/res/layout/activity_main.xml" value="0.15942028985507245" />
@@ -17,6 +23,7 @@
         <entry key="..\:/Users/Admin/AndroidStudioProjects/foodyAndroid/app/src/main/res/drawable/remove.xml" value="0.151" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/foodyAndroid/app/src/main/res/layout/activity_bill.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/foodyAndroid/app/src/main/res/layout/activity_cart_food.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/foodyAndroid/app/src/main/res/layout/activity_change_password.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/foodyAndroid/app/src/main/res/layout/activity_home_test.xml" value="0.25" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/foodyAndroid/app/src/main/res/layout/activity_info_user.xml" value="0.264" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/foodyAndroid/app/src/main/res/layout/activity_login.xml" value="0.15896739130434784" />
@@ -33,6 +40,7 @@
         <entry key="..\:/Users/Admin/AndroidStudioProjects/foodyAndroid/app/src/main/res/layout/list_food_cart.xml" value="0.15896739130434784" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/foodyAndroid/app/src/main/res/layout/menu.xml" value="0.1" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/foodyAndroid/app/src/main/res/layout/nhahang_item.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/foodyAndroid/app/src/main/res/layout/order_food_item.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/foodyAndroid/app/src/main/res/menu/bottom_menu.xml" value="0.25416666666666665" />
       </map>
     </option>

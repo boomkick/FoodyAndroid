@@ -24,6 +24,7 @@ public class Food {
         this.image = img_selling;
         this.price = price;
     }
+    public Food(){}
 
     public int getId() {
         return id;

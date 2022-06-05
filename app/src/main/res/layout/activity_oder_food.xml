@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OderFood">
+    tools:context=".orderFoodActivity">
 
     <LinearLayout
         android:id="@+id/title"
@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-
+            android:id="@+id/imageButtonEnd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -44,6 +44,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
+            android:id="@+id/imageViewOrderFood"
             android:layout_weight="1"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -60,14 +61,14 @@
             <TextView
                 android:textSize="25dp"
                 android:text="Tên món ăn"
-                android:id="@+id/ten_mon_an_ban_chay"
+                android:id="@+id/textViewNameOrderFood"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
             <TextView
                 android:textSize="25dp"
                 android:text="Giá món ăn"
-                android:id="@+id/gia_mon_an_ban_chay"
+                android:id="@+id/textViewPriceOrderFood"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
@@ -81,7 +82,7 @@
             android:layout_weight="1">
 
             <ImageButton
-                android:id="@+id/btn_decrease_quantity"
+                android:id="@+id/buttonDecreaseOrderFood"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center_vertical"
@@ -89,16 +90,16 @@
                 android:src="@drawable/remove" />
 
             <TextView
-                android:id="@+id/txt_quantity"
-                android:layout_width="wrap_content"
+                android:id="@+id/textViewQuantityOrderFood"
+                android:layout_width="20dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:text="01"
+                android:text="0"
                 android:textColor="@color/black"
                 android:textSize="20dp" />
 
             <ImageButton
-                android:id="@+id/btn_increase_quantity"
+                android:id="@+id/buttonIncreaseOrderFood"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center_vertical"
@@ -128,7 +129,7 @@
 
 
         <Button
-            android:id="@+id/btn_add_to_cart"
+            android:id="@+id/buttonAddToCart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -138,7 +139,7 @@
 
         <TextView
             android:layout_marginLeft="100dp"
-            android:id="@+id/gia_tien"
+            android:id="@+id/textViewTotalPriceOrderFood"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

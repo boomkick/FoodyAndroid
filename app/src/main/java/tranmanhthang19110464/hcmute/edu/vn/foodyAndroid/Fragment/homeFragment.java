@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.Toast;
 
@@ -31,6 +32,8 @@ import tranmanhthang19110464.hcmute.edu.vn.foodyAndroid.restaurantActivity;
  */
 public class homeFragment extends Fragment {
     GridView danhSachNhaHang;
+    Database database ;
+    EditText editTextfind;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -82,13 +85,24 @@ public class homeFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 
         super.onViewCreated(view, savedInstanceState);
+        database = new Database(getActivity());
         danhSachNhaHang = (GridView) view.findViewById(R.id.gridViewNhaHang);
+        editTextfind = (EditText) view.findViewById(R.id.editTextfind);
         addNhaHangVaoGridView();
         setOnClickNhaHangGridView();
 
+
+        editTextfind.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean b) {
+                addNhaHangTKVaoGridView();
+                setOnClickNhaHangGridView();
+                editTextfind.setText("");
+            }
+        });
     }
     public ArrayList<NhaHang> getAllRestaurants(){
-        Database database = new Database(getActivity());
+        //Database database = new Database(getActivity());
         Cursor dataCongViec = database.GetData("SELECT * FROM restaurant");
         ArrayList<NhaHang> nhaHangArrayList = new ArrayList<NhaHang>();
         while(dataCongViec.moveToNext()) {
@@ -120,5 +134,30 @@ public class homeFragment extends Fragment {
                 startActivity(intent);
             }
         });
+    }
+    public ArrayList<NhaHang> Search(String search){
+
+        Cursor dataNhahang = database.GetData("Select * from restaurant where name like '%"+search+"%'");
+        ArrayList<NhaHang> nhaHangArrayList = new ArrayList<NhaHang>();
+        while(dataNhahang.moveToNext()) {
+            nhaHangArrayList.add(new NhaHang(
+                    dataNhahang.getInt(0),
+                    dataNhahang.getInt(1),
+                    dataNhahang.getString(2),
+                    dataNhahang.getString(3),
+                    dataNhahang.getString(4),
+                    dataNhahang.getDouble(5),
+                    dataNhahang.getInt(6)
+            ));
+        }
+        return nhaHangArrayList;
+    }
+    public void addNhaHangTKVaoGridView(){
+        String search = editTextfind.getText().toString();
+        ArrayList<NhaHang> nhaHangModelArrayList = new ArrayList<NhaHang>();
+        nhaHangModelArrayList = Search(search);
+        AdapterNhaHang adapter = new AdapterNhaHang(this, nhaHangModelArrayList);
+
+        danhSachNhaHang.setAdapter(adapter);
     }
 }

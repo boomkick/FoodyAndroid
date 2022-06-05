@@ -72,11 +72,11 @@
             android:textSize="25sp" />
 
         <Button
-            android:id="@+id/textViewsetting"
+            android:id="@+id/textViewDoiMK"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:backgroundTint="@color/white"
-            android:text="Cài đặt chung"
+            android:text="Đổi mật khẩu"
             android:textAlignment="textStart"
             android:textColor="@color/black"
             android:textSize="25dp" />
@@ -98,6 +98,16 @@
             android:layout_height="60dp"
             android:backgroundTint="@color/white"
             android:text="Đăng xuất"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/buttonDangNhap"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/white"
+            android:text="Đăng nhập"
             android:textAlignment="textStart"
             android:textColor="@color/black"
             android:textSize="25dp" />

@@ -1,28 +1,32 @@
 package tranmanhthang19110464.hcmute.edu.vn.foodyAndroid;
 
 public class User {
-    private String id;
+    private int id;
     private String Name;
     private String Birth;
     private String Address;
+    private String phone;
+    private String pass;
     private int ImgUser;
     private int isBuyer;
 
 
-    public User(String id, String name, String birth, String address, int imgUser, int isBuyer) {
+    public User(int id, String name, String birth, String address, String phone, String pass, int imgUser, int isBuyer) {
         this.id = id;
         Name = name;
         Birth = birth;
         Address = address;
+        this.phone = phone;
+        this.pass = pass;
         ImgUser = imgUser;
         this.isBuyer = isBuyer;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -64,5 +68,21 @@ public class User {
 
     public void setIsBuyer(int isBuyer) {
         this.isBuyer = isBuyer;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getPass() {
+        return pass;
+    }
+
+    public void setPass(String pass) {
+        this.pass = pass;
     }
 }

@@ -4,26 +4,30 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import tranmanhthang19110464.hcmute.edu.vn.foodyAndroid.Database.Database;
 
 public class restaurantActivity extends AppCompatActivity {
     TextView txtTenNhaHang,txtTenNhaHangTopBar,txtDiaChi,txtGio,txtDanhGia;
-    ImageView imgBack,imgNhaHang;
+    ImageView imgBack, imgNhaHang, imgCart;
     ListView listViewFoods;
     ArrayList<Food> arrayListFood;
     ArrayList<NhaHang> nhaHangModelArrayList;
     AdapterFood adapterFood;
     NhaHang nhaHang;
+    int idNhaHang;
+    Button btnLienHe;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -31,16 +35,14 @@ public class restaurantActivity extends AppCompatActivity {
         setContentView(R.layout.activity_restaurant);
 
         Intent intent = getIntent();
-        int idNhaHang = intent.getIntExtra("idNhaHang",1);
+        idNhaHang = intent.getIntExtra("idNhaHang",1);
         nhaHangModelArrayList = getAllRestaurants();
         setInformationNhaHang(idNhaHang);
 
         listViewFoods = (ListView) findViewById(R.id.listViewMonAnBanChay);
         arrayListFood = new ArrayList<Food>();
-//        arrayListFood.add(new Food("Cơm gà",R.drawable.comga,10000));
-//        arrayListFood.add(new Food("Bún bò", R.drawable.bunbo,20000));
         arrayListFood = getDataFoodsByRestanrantID(idNhaHang);
-        adapterFood = new AdapterFood(restaurantActivity.this,R.layout.menu,arrayListFood);
+        adapterFood = new AdapterFood(restaurantActivity.this,R.layout.menu,arrayListFood,idNhaHang);
         listViewFoods.setAdapter(adapterFood);
 
         imgBack = (ImageView) findViewById(R.id.imageViewBack);
@@ -48,6 +50,25 @@ public class restaurantActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 finish();
+            }
+        });
+        imgCart = (ImageView) findViewById(R.id.imageViewCart);
+        imgCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(restaurantActivity.this,cartFoodActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnLienHe = (Button) findViewById(R.id.buttonLienHe);
+        btnLienHe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent_lien_he = new Intent(restaurantActivity.this,MapsActivity.class);
+                intent_lien_he.putExtra("idNhaHang",idNhaHang);
+                startActivity(intent_lien_he);
+
             }
         });
 

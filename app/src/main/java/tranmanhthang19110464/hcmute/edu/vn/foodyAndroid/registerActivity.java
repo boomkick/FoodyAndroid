@@ -16,8 +16,6 @@ import tranmanhthang19110464.hcmute.edu.vn.foodyAndroid.Database.Database;
 import tranmanhthang19110464.hcmute.edu.vn.foodyAndroid.R;
 
 public class registerActivity extends AppCompatActivity {
-
-
     EditText PhoneUsers;
     EditText Password;
     EditText RePassword;

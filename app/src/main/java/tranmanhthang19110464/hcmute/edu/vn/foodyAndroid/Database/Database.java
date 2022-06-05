@@ -49,14 +49,12 @@ public class Database extends SQLiteOpenHelper {
                 "user_name VARCHAR(255), " +
                 "content VARCHAR(255), " +
                 "rate DOUBLE)");
-        sqLiteDatabase.execSQL("Create table if not exists ordertable(idOrder INTEGER PRIMARY KEY AUTOINCREMENT," +
-                "user_id INTEGER, " +
+        sqLiteDatabase.execSQL("Create table if not exists ordertable(user_id INTEGER, " +
                 "restaurant_id INTEGER, " +
                 "food_id INTEGER, " +
                 "quantity INTEGER, " +
                 "price INTEGER, " +
                 "isConfirm INTEGER)");
-
     }
 
     @Override

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OderFood">
+    tools:context=".orderFoodActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,14 +27,14 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/food_oder"
+                android:id="@+id/textViewNameFoodCart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Tên món ăn"
                 android:textSize="25dp" />
 
             <TextView
-                android:id="@+id/price_oder"
+                android:id="@+id/textViewPriceCart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Giá món ăn"
@@ -49,30 +49,17 @@
             android:layout_marginLeft="5dp"
             android:layout_weight="1">
 
-            <ImageButton
-                android:id="@+id/btn_decrease_quantity"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center_vertical"
-                android:background="@color/white"
-                android:src="@drawable/remove" />
+
 
             <TextView
-                android:id="@+id/txt_quantity"
+                android:id="@+id/textViewQuantityCart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:text="01"
                 android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textSize="30dp" />
 
-            <ImageButton
-                android:id="@+id/btn_increase_quantity"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center_vertical"
-                android:background="@color/white"
-                android:src="@drawable/plus" />
 
         </LinearLayout>
     </LinearLayout>
